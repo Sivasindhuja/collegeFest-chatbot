@@ -1,5 +1,5 @@
 
-const API_URL = "http://127.0.0.1:8000/api/chat";
+const API_URL = "api/chat";
 
 const WELCOME_MESSAGE =
   "Hi there! I'm the TECHSPARK assistant. Ask me about the fest dates, events, speakers, registration, fees, rules or anything else related to TECHSPARK!";
