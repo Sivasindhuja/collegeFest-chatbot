@@ -1,0 +1,64 @@
+{
+  "fest_name": "TECHSPARK 2025",
+  "description": "An annual inter-college technical fest hosted by SPMVV.",
+  "dates": {
+    "start": "2025-08-22",
+    "end": "2025-08-24"
+  },
+  "venue": "SPMVV Campus, Tirupati",
+  "events": [
+    {
+      "name": "CodeStorm",
+      "description": "A 24-hour hackathon with cash prizes up to ₹50,000."
+    },
+    {
+      "name": "RoboRush",
+      "description": "A robotics competition featuring obstacle navigation and battle rounds."
+    },
+    {
+      "name": "Brainwave",
+      "description": "A technical quiz with team rounds and buzzer battles."
+    },
+    {
+      "name": "DesignSprint",
+      "description": "A UI/UX design challenge judged by industry experts."
+    }
+  ],
+  "speakers": [
+    {
+      "name": "Dr. Kavya Ramesh",
+      "role": "AI Researcher",
+      "organization": "Google DeepMind"
+    },
+    {
+      "name": "Mr. Arjun Mehta",
+      "role": "CTO",
+      "organization": "InnovateX"
+    },
+    {
+      "name": "Ms. Sneha Rao",
+      "role": "Product Designer",
+      "organization": "Microsoft"
+    }
+  ],
+  "registration": {
+    "deadline": "2025-08-20",
+    "fee": "₹200 per participant",
+    "eligibility": "Students from any college",
+    "url": "https://techspark-spmvv.in/register",
+    "includes": [
+      "Fest kit",
+      "Lunch coupons"
+    ]
+  },
+  "rules": [
+    "Every participant must carry a valid college ID.",
+    "Teams must register in advance for group events.",
+    "Plagiarism or misconduct may lead to disqualification."
+  ],
+  "contacts": {
+    "email": "techspark@spmvv.ac.in",
+    "phone": "+91 98765 43210",
+    "instagram": "@techspark_spmvv"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TECHSPARK college fest assistant chatbot." />
+    <title>TECHSPARK Assistant</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="chat-app">
+      <header class="chat-header">
+        <div class="bot-avatar" aria-hidden="true">TS</div>
+        <div class="bot-header-text">
+          <h1 class="bot-name">TECHSPARK Assistant</h1>
+          <p class="bot-status">Ask me anything about the fest!</p>
+        </div>
+        <button id="clear-button" type="button" class="clear-button" aria-label="Clear conversation">
+          Clear chat
+        </button>
+      </header>
+
+      <section
+        class="chat-window"
+        id="chat-window"
+        aria-label="Conversation with the TECHSPARK assistant"
+      >
+        <div id="messages" class="messages"></div>
+        <div id="typing-indicator" class="typing-indicator" role="status" hidden>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="sr-only">The assistant is typing.</span>
+        </div>
+      </section>
+
+      <section class="suggestions" id="suggestions" aria-label="Suggested questions"></section>
+
+      <form id="chat-form" class="chat-input-form" autocomplete="off">
+        <input
+          id="question-input"
+          type="text"
+          name="question"
+          placeholder="Type your question about the fest..."
+          maxlength="1000"
+          autocomplete="off"
+          aria-label="Your question about the fest"
+          required
+        />
+        <button id="send-button" type="submit" class="send-button">Send</button>
+      </form>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
