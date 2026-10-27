@@ -26,7 +26,6 @@ An AI-powered chatbot that answers student questions about the TECHSPARK college
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
 - [Running Tests](#running-tests)
-- [Deployment](#deployment)
 - [Screenshots](#screenshots)
 - [Limitations and Future Improvements](#limitations-and-future-improvements)
 
@@ -347,9 +346,9 @@ pip install pytest httpx
 
 ### 4. Configure environment variables
 
-Copy `.env.example` to `.env` and provide your own Gemini API key. Never commit `.env` or share your API key.
+Copy `.env.example` to `.env` and provide your own Gemini API key and other required variables
 
-See the [Environment Variables](#environment-variables) section for the available settings.
+
 
 ### 5. Run the backend
 
@@ -370,8 +369,7 @@ For local browser testing, serve the frontend from a local origin allowed by the
 | Variable | Purpose | Default |
 |---|---|---|
 | `GEMINI_API_KEY` | Server-side Gemini API key | Required |
-| `GEMINI_MODEL` | Gemini model name | `gemini-2.0-flash` |
-| `GEMINI_TIMEOUT_SECONDS` | Intended request-timeout configuration | `10` |
+| `GEMINI_MODEL` | Gemini model name | `gemini-3.6-flash` |
 | `GEMINI_TEMPERATURE` | Generation temperature | `0.2` |
 | `GEMINI_MAX_OUTPUT_TOKENS` | Maximum generated output tokens | `400` |
 | `CHAT_RATE_LIMIT_MAX` | Requests allowed in the rate-limit window | `10` |
@@ -393,36 +391,24 @@ The tests mock the Gemini API, so a real API key and live Gemini quota are not r
 
 The current suite covers input validation, the health endpoint, successful response structure, topic-based refusal, rate limiting, missing API configuration, timeout and provider-error handling, empty model responses, and invalid or missing configuration files.
 
-## Deployment
 
-The application is configured for deployment as a single Vercel project, with the frontend and API served from the same deployment.
-
-### Deployment steps
-
-1. Import the GitHub repository into Vercel.
-2. Configure the required environment variables in the Vercel project settings.
-3. Deploy the application.
-4. Verify that `/api/health` responds successfully.
-5. Open the live demo and test both a fest-related question and an unrelated question.
-
-Environment-variable changes require a new deployment to take effect.
-
-**Live demo:** https://college-fest-chatbot.vercel.app/
 
 ## Screenshots
 
-Screenshots have not yet been added to this README.
 
-For a more complete project presentation, add screenshots of:
+### 1. Chatbot Interface and Fest Information
 
-1. **Chat interface:** The initial screen and suggested questions.
-2. **Successful response:** An answer to a fest-related question.
-3. **Out-of-scope response:** The refusal returned for an unrelated question.
-4. **Error handling:** A friendly unavailable message, if this can be reproduced safely.
+The main interface of the TECHSPARK Assistant, featuring suggested questions and an interactive chat experience for college fest-related queries.
 
-Store screenshots in a directory such as `docs/screenshots/` and embed them here after adding the image files to the repository.
+![TECHSPARK Chatbot Interface](screenshots/chatbot-home.png)
 
-Before publishing screenshots, make sure they do not expose API keys, personal information, or other secrets.
+### 2. Out-of-Scope Question Handling
+
+The chatbot identifies unrelated questions and politely redirects users to TECHSPARK-related topics, demonstrating the application's topic-filtering mechanism.
+
+![TECHSPARK Out-of-Scope Question Handling](screenshots/out-of-scope-response.png)
+
+
 
 ## Limitations and Future Improvements
 
@@ -436,7 +422,6 @@ Potential next steps include:
 - Improve topic detection beyond a simple keyword-based check.
 - Consider a shared rate limiter if the application needs to support meaningful production traffic.
 - Add dedicated tests for invalid API keys and specific provider outage responses.
-- Add screenshots to document the user interface and key application behaviors.
 - Reconsider RAG if the knowledge base grows beyond what is practical to include directly in each prompt.
 
 ---
